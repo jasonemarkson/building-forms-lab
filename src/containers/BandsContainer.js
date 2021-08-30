@@ -19,8 +19,9 @@ class BandsContainer extends Component {
 }
 
 const mapStateToProps = state => {
+
   return {
-    bands: state.addBand
+    bands: state.bands
   }
 }
 

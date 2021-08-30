@@ -1,15 +1,19 @@
 import React from 'react'
 
 const Bands = props => {
-    props.bands.map((band, index) => {
-        return (
-            <li key={index}>{band}</li>
-        )
-    })
+    console.log(props)
+    let bands = [];
+    if (props.bands && props.bands.map) {
+        bands = props.bands.map((band, index) => {
+            return (
+                <li key={index}>{band.name}</li>
+            )
+        })
+    }
 
     return (
         <div>
-            {Bands}
+            {bands}
         </div>
     )
 }
